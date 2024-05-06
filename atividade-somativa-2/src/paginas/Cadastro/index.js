@@ -22,7 +22,7 @@ class Cadastro extends Component {
                 await firebase.firestore().collection('usuarios').doc(retorno.user.uid).set({
                     nome: this.state.nome,
                     sobrenome: this.state.sobrenome,
-                    nasimento: this.state.nascimento
+                    nascimento: this.state.nascimento
                 });
             })
 
@@ -34,7 +34,13 @@ class Cadastro extends Component {
                 <h1>Cadastro</h1>
                 <input type="text" placeholder="email" onChange={(e) => this.setState({ email: e.target.value })}></input>
                 <br />
-                <input type="text" placeholder="password" onChange={(e) => this.setState({ password: e.target.value })}></input>
+                <input type="password" placeholder="password" onChange={(e) => this.setState({ password: e.target.value })}></input>
+                <br />
+                <input type="text" placeholder="nome" onChange={(e) => this.setState({ nome: e.target.value })}></input>
+                <br />
+                <input type="text" placeholder="sobrenome" onChange={(e) => this.setState({ sobrenome: e.target.value })}></input>
+                <br />
+                <input type="text" placeholder="Data de nascimento" onChange={(e) => this.setState({ nascimento: e.target.value })}></input>
                 <br />
                 <button onClick={this.criarUsuario}>Cadastrar</button>
             </div>
