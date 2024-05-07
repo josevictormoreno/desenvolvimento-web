@@ -16,6 +16,9 @@ class Login extends Component {
             .then(() => {
                 window.location.href = '/principal';
             })
+            .catch(() => {
+        window.alert("Email ou Senha incorretos!")
+      })
     }
 
     render() {

@@ -24,6 +24,9 @@ class Principal extends Component {
                         });
                     })
             }
+      else {
+        window.location.href = '/';
+      }
         });
     }
 
