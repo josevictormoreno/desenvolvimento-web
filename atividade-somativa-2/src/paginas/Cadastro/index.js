@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import './style.css'
 import firebase from "../../Firebase";
+import { Link } from "react-router-dom";
 
 class Cadastro extends Component {
     constructor(props) {
@@ -24,6 +25,7 @@ class Cadastro extends Component {
                     sobrenome: this.state.sobrenome,
                     nascimento: this.state.nascimento
                 });
+        window.alert("Cadastro realizado!")
             })
 
     }
@@ -43,6 +45,7 @@ class Cadastro extends Component {
                 <input type="text" placeholder="Data de nascimento" onChange={(e) => this.setState({ nascimento: e.target.value })}></input>
                 <br />
                 <button onClick={this.criarUsuario}>Cadastrar</button>
+        <Link to="/"><button>Tela de Login</button></Link>
             </div>
         );
     }

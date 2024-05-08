@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import firebase from "../../Firebase";
 
 class Login extends Component {
@@ -30,6 +31,7 @@ class Login extends Component {
                 <input type="password" placeholder="password" onChange={(e) => this.setState({ password: e.target.value })}></input>
                 <br />
                 <button onClick={this.logar}>Logar</button>
+        <Link to="/cadastro"><button>Cadastrar</button></Link>
             </div>
         );
     }
